@@ -1,1 +1,1 @@
-what to use to Display the contents list of your current directory
+this project is all about learning more about shell
