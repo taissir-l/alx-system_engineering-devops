@@ -2,7 +2,5 @@
 # webstack application debugging
 # Fixeing the issue with the web server
 
-apt-get install apache2 -y
-echo "Hello Holberton" > /var/www/html/index.html
-echo "ServerName localhost" >> /etc/apache2.conf
+echo 'Hello Holberton' > /var/www/html/index.html
 sudo service apache2 start
