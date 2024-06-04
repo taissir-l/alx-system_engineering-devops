@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-'''unction that queries the Reddit API and returns a list containing the titles of
-all hot articles for a given subreddit'''
+'''unction that queries the Reddit API and returns a list containing titles
+of all hot articles for a given subreddit'''
 import requests
 
 
