@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-'''function that queries the Reddit API and prints the titles of the first 10
-hot posts listed for a given subreddit
-'''
+'''functions for working with the API'''
 import requests
 
 
@@ -10,7 +8,7 @@ BASE_URL = 'https://www.reddit.com'
 
 
 def top_ten(subreddit):
-    '''top ten posts from a given subreddit'''
+    '''title of the top ten posts from a given subreddit'''
     api_headers = {
         'Accept': 'application/json',
         'User-Agent': ' '.join([
