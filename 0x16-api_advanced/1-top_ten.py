@@ -1,38 +1,22 @@
 #!/usr/bin/python3
-'''functions for working with the API'''
+"""Reddit API and prints the titles of the first 10 hot posts"""
 import requests
 
 
-BASE_URL = 'https://www.reddit.com'
-'''Reddit URL'''
-
-
 def top_ten(subreddit):
-    '''title of the top ten posts from a given subreddit'''
-    api_headers = {
-        'Accept': 'application/json',
-        'User-Agent': ' '.join([
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
-            'AppleWebKit/537.36 (KHTML, like Gecko)',
-            'Chrome/97.0.4692.71',
-            'Safari/537.36',
-            'Edg/97.0.1072.62'
-        ])
-    }
-    sort = 'top'
-    limit = 10
-    res = requests.get(
-        '{}/r/{}/.json?sort={}&limit={}'.format(
-            BASE_URL,
-            subreddit,
-            sort,
-            limit
-        ),
-        headers=api_headers,
-        allow_redirects=False
-    )
-    if res.status_code == 200:
-        for post in res.json()['data']['children'][0:10]:
-            print(post['data']['title'])
-    else:
-        print(None)
+    """10 reddit apI
+    """
+    if subreddit is None or type(subreddit) != str:
+        print('None')
+        return
+    params = {'limit': 10}
+    headers = {'User-Agent': 'Reddit apI'}
+    url = "http://www.reddit.com/r/{}/top/.json".format(subreddit)
+    res = requests.get(url, params=params,
+                       headers=headers)
+    if res.status_code != 200:
+        print('None')
+        return
+    resp = res.json().get('data').get('children')
+    for child in resp:
+        print(child.get('data').get('title'))
