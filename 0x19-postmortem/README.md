@@ -54,3 +54,4 @@ To resolve the issue, the following steps were taken:
 5. **Conduct Training:** Provide additional training for engineers on the importance of careful configuration management and the new review processes.
 
 By addressing these corrective and preventative measures, we aim to minimize the risk of similar outages in the future and ensure a more robust and reliable WeatherPy service.
+(P.S. No load balancers were harmed in the making of this postmortem.)
