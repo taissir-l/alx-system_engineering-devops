@@ -1,3 +1,6 @@
+![giphy](https://github.com/taissir-l/alx-system_engineering-devops/assets/128995791/a3030bed-dd8f-47c8-860a-d23daa17cc35)
+
+
 # Postmortem: WeatherPy Service Outage
 
 ## Issue Summary
